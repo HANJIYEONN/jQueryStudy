@@ -1,0 +1,23 @@
+<!--
+ jQuery란?
+    1. 엘리먼트를 선택하는 강력한 방법과
+    2. 선택된 엘리먼트들을 효율적으로 제어할 수 있는 다양한 수단을 제공하는
+    3. 자바스크립트 라이브러리
+
+ jQuery 문법
+    $(제어대상).method1().method2();
+    --주어--    --서술어--
+-->
+
+
+<html>
+    <body>
+        <div class = "welcome"></div>
+        <div class = "welcome"></div>
+        <script src="jquery-2.1.3.min.js"></script>
+        <script type="text/javascript">
+            $('.welcome').html('I going to home.... ').css('background-color', 'gray');
+            $('.welcome').css('background-color', 'gray').html('I going to home.... '); // .()순서 상관 없는 듯
+        </script>
+    </body>
+</html>>
