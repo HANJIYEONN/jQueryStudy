@@ -1,0 +1,68 @@
+<!--
+    Chain이란?
+        = jQuery의 메소드들은 반환값으로 자기자신을 반환해야 한다는 규칙을 가지고 있다.
+            이를 이용하면 한번 선택한 대상에 대해서 연속적인 제어를 할 수 있다.            
+
+    장점
+        = 코드가 간결해진다.
+        =인간의 언어와 유사하여 사고의 자연스러운 과정과 일치
+-->
+<html>
+    <body>
+        <a id="tutorial" href="https://naver.com" target="_self">jQuery</a>
+        <script src="jquery-2.1.3.min.js"></script>
+        <script type="text/javascript">
+            $('#tutorial').attr('href', 'https://youtube.com').attr('target', '_blank').css('color', 'gray').attr('href', 'https://https://blog.naver.com/lovelybarry');
+        </script>
+    </body>
+</html>
+<!--
+    연결 웹사이트를 네이버에서 유튭으로 바꿔줌(덮어씀) css 를 덮어씀
+    사슬이 여러개 연결 되었을땐 맨 뒤에 있는것이 적용됨. 앞에서부터 순서대로 가나봄
+-->
+
+
+
+<!--
+    day4를 DOM으로 적용 /jQuery보다 길어짐
+-->
+
+<html>
+    <body>
+        <a id="tutorial" href="https://naver.com" target="_self">jQuery</a>
+        <script type="text/javascript">
+            var tutorial = document.getElementById('tutorial');
+            tutorial.setAttribute('href', 'https://youtube.com');
+            tutorial.setAttribute('target', '_blank');
+            tutorial.style.color='gray';
+        </script>
+    </body> 
+</html>
+
+
+
+
+<!--
+    탐색(traversing)
+        = chain의 대상을 바꿔서 체인을 계속 연장 시킬 수 있는 방법
+        = 너무 복잡한 chain은 가독성을 떨어뜨릴 수 있다.
+        = https://api.jquery.com/category/traversing/
+-->
+<html>
+    <body>
+        <ul class = "first">
+            <li class = "moon"> moon </li>
+            <li> rose </li>
+            <li class = "sun">sun</li>
+        </ul>
+        <ul class = "secound">
+            <li class = "moon">moon</li>
+            <li>rose</li>
+            <li class = "sun">sun</li>
+        </ul>
+        <script src="jquery-2.1.3.min.js"></script>
+        <script type = "text/javascript">
+        $('ul.first').find('.moon').css('background-color', 'gray').end().find('.sun').css('background-color', 'red');
+        </script>
+    </body>   
+</html>
